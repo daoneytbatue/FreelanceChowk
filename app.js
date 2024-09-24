@@ -20,10 +20,6 @@ app.get('/login', (req, res) => {
 //     res.render("login")
 // })
 
-app.get('/create', (req, res) => {
-    res.render("create")
-})
-
 app.post('/create', async (req, res) => {
     let {username, email, password} = req.body;
 
