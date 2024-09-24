@@ -12,13 +12,13 @@ app.get('/', (req, res) => {
     res.render("index");
 })
 
-app.get('/login', (req, res) => {
-    res.render("login");
+app.get('/signin', (req, res) => {
+    res.render("signin");
+})
+app.get('/signup', (req, res) => {
+    res.render("signup");
 })
 
-// app.get('/signup', (req, res) => {
-//     res.render("login")
-// })
 
 app.post('/create', async (req, res) => {
     let {username, email, password} = req.body;

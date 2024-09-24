@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/signup.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <title>Sign-up</title>
+</head>
+
+<body>
+    <nav>
+        <div class='navbar'>
+            <div class='aryanlogo'>
+                <a href="index.html">Freelance<span class="free">Chowk</span></a>
+            </div>
+            <div class="menu-btn">
+                <button class="icon" onclick="mega_menu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul class='nav-menu'>
+                    <li>FEATURES</li>
+                    <li>SOLUTIONS</li>
+                    <li>RESOURCES</li>
+                    <li>PRICING</li>
+                </ul>
+            </div>
+            
+        </div>
+    </nav>
+
+    <main>
+        <section class="sign-up">
+            <form action="/create" class="sign-up-form" method = "post">
+                <h2 class="title">Sign up</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username" name = "username">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email" name = "email">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" name = "password">
+                </div>
+                <input type="submit" class="btn" value="Sign up" />
+                <p class="social-text">Or Sign up with social platforms</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
