@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+    background: #ddd;
+    font-family: "Gilroy-Medium-☞", Helvetica;
+}
+
+main {
+    display: block;
+}
+
+.information {
+    margin: 1em;
+    display: flex;
+    /* border: 1px solid black; */
+    padding: 1em;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 5px 5px 5px gray;
+    /* width: 100%; */
+}
+
+.tables {
+    display: flex;
+    /* margin: 1em; */
+    justify-content: space-evenly;
+}
+
+.info {
+    margin: 1em;
+    width: 100%;
+}
+
+.image img {
+    max-width: 20em;
+    border-radius: 10px;
+}
+
+.tbl tr td {
+    padding: 3px;
+}
+
+@media (max-width: 988px) {
+    .tables {
+        flex-direction: column;
+    }
+
+    .tbl {
+        margin: 1em;
+    }
+}
+
+.more-info {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px gray;
+    margin: 1em;
+    padding: 1em;
+    /* width: 100%; */
+}
+
+.more-info p {
+    text-align: justify;
+}
+
+
+
+.skill-heading {
+    margin-bottom: 1em;
+}
+
+.show-skills {
+    max-width: 50%;
+}
+
+.skill {
+    margin: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    background: #ddd;
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px gray;
+}
+
+.projects {
+    margin: 1em;
+    padding: 1em;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px gray;
+}
+
+.project-infos {
+    display: flex;
+}
+
+.project-image img {
+    max-width: 400px;
+    max-height: 350px;
+    border-radius: 10px;
+}
+
+.project-image {
+    margin: 1em;
+}
+
+.end-date {
+    margin: 1em;
+    color: gray;
+    font-size: 20px;
+}
+
+.project-features {
+    max-width: 50%;
+}
+
+.project-features .feature {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 50px;
+    background: #ddd;
+}
+
+.feature {
+    box-shadow: 5px 5px 5px gray;
+}
+
+.cost-duration {
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 700px) {
+    .project-infos{
+        flex-direction: column;
+    }
+
+
+}

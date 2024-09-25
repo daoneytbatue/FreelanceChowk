@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+    <title>Freelancer Questionnaire</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Freelancer Profile Questionnaire</h1>
+        <form id="questionnaire">
+            <section>
+                <h2>Personal Information</h2>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" required>
+            </section>
+
+            <section>
+                <h2>Skills</h2>
+                <label for="skills">What are your top skills?</label>
+                <textarea id="skills" rows="4" required></textarea>
+            </section>
+
+            <section>
+                <h2>Experience</h2>
+                <label for="experience">Briefly describe your experience:</label>
+                <textarea id="experience" rows="4" required></textarea>
+
+                <label for="portfolio">Link to your portfolio:</label>
+                <input type="url" id="portfolio">
+            </section>
+
+            <section>
+                <h2>Project Preferences</h2>
+                <label for="project-type">Preferred Project Type:</label>
+                <select id="project-type" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="short-term">Short-term</option>
+                    <option value="long-term">Long-term</option>
+                    <option value="part-time">Part-time</option>
+                </select>
+
+                <label for="availability">Availability:</label>
+                <input type="text" id="availability" placeholder="e.g., 20 hours/week" required>
+            </section>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,557 @@
+body {
+    font-family: "Gilroy-Medium-☞", Helvetica;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.aryanlogo a {
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 35px;
+    color: black;
+}
+
+.log-in-btn {
+    margin-top: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 15px;
+    font-family: "Outfit", sans-serif;
+    color: #000000;
+
+
+    li {
+        transition: 0.5s;
+        cursor: pointer;
+
+
+        &:hover {
+            transform: scale(1.05);
+            color: #00bfa6;
+
+
+        }
+    }
+
+
+}
+
+
+.nav-connect {
+    padding: 15px 50px;
+    font-size: 16px;
+    border-radius: 16px 16px 16px 16px;
+    background: #00bfa6;
+    font-family: "Inter", Sans-serif;
+    cursor: pointer;
+    transition: all 0.5s linear;
+    border: none;
+    text-decoration: none;
+
+    &:hover {
+        transform: scale(1.05);
+        background: #00bfa6;
+        color: black;
+    }
+}
+
+.fa-solid,
+.fa-bars {
+    display: none;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.icon {
+    display: none;
+}
+
+@media (max-width: 988px) {
+
+    /* Styles for screens smaller than 768px */
+
+    .nav-connect {
+        padding: 10px 30px;
+    }
+
+    .aryanlogo a {
+        font-size: 30px;
+    }
+
+    .fa-solid,
+    .fa-bars {
+        display: block;
+    }
+
+    .nav-menu {
+        width: 7rem;
+        position: absolute;
+        display: block;
+        width: 93%;
+        left: 10px;
+        border-radius: 5px;
+    }
+
+    .icon {
+        margin: -5px;
+        display: block;
+    }
+
+    .nav-menu li {
+        margin: 5px;
+        transition: all 0.5s linear;
+    }
+
+    .menu-btn button.active {
+        /* Add styles to indicate the button is active (e.g., change color) */
+        background: black;
+    }
+
+    .nav-menu {
+        display: none;
+        background: #00bfa6;
+    }
+
+    .nav-menu.show {
+        display: block;
+        /* Add any additional styles for the visible menu */
+    }
+
+    .icon {
+        border: none;
+        background: white;
+        cursor: pointer;
+        opacity: 0.7;
+    }
+
+    .main {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .headline {
+        margin: 0.5rem;
+    }
+
+    .headline2 {
+        margin: .5rem;
+    }
+
+    .btt {
+        flex-direction: column;
+    }
+
+    .bt2 {
+        margin-top: 1rem;
+    }
+
+    .text-wrap {
+        left: 0%;
+    }
+
+    .serveices p {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .text-wrap {
+        margin: 0px;
+    }
+
+    .img {
+        height: 28rem;
+        width: 38rem;
+        border-radius: 10px;
+        margin: 20px;
+    }
+
+    .images {
+        /* justify-content: space-around; */
+        flex-direction: column;
+        overflow: hidden;
+
+    }
+
+    .images .img-title {
+        text-align: center;
+    }
+
+    .button-1 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .card {
+        align-items: center;
+    }
+}
+
+.main {
+    margin-top: 5rem;
+    display: flex;
+
+}
+
+.headline {
+    font-size: 15px;
+    width: 50%;
+    text-align: center;
+}
+
+.post {
+    font-size: 68px;
+}
+
+.tap {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.bt1 {
+    padding: 15px 50px;
+    font-size: 16px;
+    border-radius: 5px;
+    background: #fbfbfb;
+    font-family: "Inter", Sans-serif;
+    cursor: pointer;
+    transition: 0.5s;
+    border: 1px solid;
+    z-index: 1;
+
+    &:hover {
+        transform: scale(1.05);
+        background: #00bfa6;
+        color: black;
+    }
+}
+
+.bt2 {
+    padding: 15px 50px;
+    font-size: 16px;
+    border-radius: 5px;
+    background: rgb(247, 212, 146);
+    font-family: "Inter", Sans-serif;
+    cursor: pointer;
+    transition: 0.5s;
+    border: black;
+
+    &:hover {
+        transform: scale(1.05);
+        background: #00bfa6;
+        color: black;
+        border: black;
+    }
+}
+
+.btt {
+    row-gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.free {
+    color: #00bfa6;
+}
+
+.headline2 {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 82px;
+}
+
+.serveices p {
+    font-size: 50px;
+    text-align: center;
+}
+
+.text-wrap p {
+    font-size: 25px;
+    text-align: center;
+}
+
+.serveices {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.img-container {
+    width: 100%;
+    height: auto;
+    background: #97f7ea;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.logo-1 {
+    margin-top: 25px;
+    height: 50px;
+}
+
+.logo-2 {
+    margin-top: 25px;
+    height: 50px;
+}
+
+.logo-3 {
+    margin-top: -25px;
+    height: 150px;
+}
+
+.logo-4 {
+    margin-top: -20px;
+    height: 150px;
+}
+
+.logo-5 {
+    margin-top: -25px;
+    height: 150px;
+}
+
+.text {
+    text-align: center;
+    /* margin: 50px; */
+    /* margin-left: 250px; */
+    /* margin-right: 250px; */
+    font-size: 19px;
+    font-family: "Inter", Sans-serif;
+    color: #303030;
+}
+
+.img {
+    height: 35rem;
+    width: 45rem;
+    border-radius: 10px;
+    margin: 20px;
+    transition: all .5s linear;
+}
+
+.images {
+    justify-content: space-around;
+    display: flex;
+    overflow: hidden;
+
+}
+
+.img-title {
+    position: absolute;
+    color: #25a4ad;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+
+.img:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    box-shadow: 5px 5px 5px gray;
+
+    .img-title {
+        opacity: 1;
+        z-index: 2;
+    }
+}
+
+.img-title-1 {
+    top: 27rem;
+    left: 24rem;
+}
+
+.img-title-2 {
+    top: 65rem;
+    left: 24rem;
+}
+
+.img-title-3 {
+    top: 27rem;
+    left: 84rem;
+}
+
+.img-title-4 {
+    top: 65rem;
+    left: 84rem;
+}
+
+.images .img-title {
+    text-align: center;
+}
+
+.button-1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.card {
+    margin: 20px;
+}
+
+.btn {
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    border: 2px solid #25a4ad;
+    background: white;
+    font-family: "Inter", Sans-serif;
+    color: #00bfa6;
+    font-size: 17px;
+    transition: all .2s linear;
+}
+
+.btn:hover {
+    color: white;
+    background: #25a4ad;
+    cursor: pointer;
+}
+
+.box {
+    width: 800px;
+    height: 840px;
+}
+
+.box .decorator {
+    position: absolute;
+    width: 660px;
+    height: 570px;
+    top: 500px;
+    left: 0;
+    border: 1px solid;
+    border-color: #00bfa6;
+    transform: rotate(50deg);
+}
+
+.text-wrap-1 {
+    height: 65px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.text-1 {
+    color: #303030;
+}
+
+.bold-text-1 {
+    color: #00bfa6;
+}
+
+.features {
+    background: #f8f8f8;
+    height: auto;
+    padding-bottom: 5px;
+}
+
+.feature-containers {
+    margin: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading {
+    text-align: center;
+    font-size: 30px;
+}
+
+.content {
+    text-align: justify;
+}
+
+.containers {
+    width: 25rem;
+    height: 27rem;
+    background: #f8f8f8;
+    padding: 1rem;
+    border: 1px solid gray;
+    transition: all .5s linear;
+    border-radius: 10px;
+}
+
+.link {
+    text-align: center;
+    margin-top: 3rem;
+    transform: all 0.5s linear;
+}
+
+.link a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.containers:hover {
+    .heading {
+        color: #00bfa6;
+    }
+
+    box-shadow: 5px 5px 5px gray;
+    border: none;
+    background: white;
+
+    .link a {
+        color: #00bfa6;
+    }
+}
+
+.card-img-top{
+    height: 200px;
+}
+
+.button-2 {
+    position: absolute;
+    margin-top: 50px;
+    left: 855px;
+}
+
+body {
+    font-family: "Inter", Sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 988px) {
+    .feature-containers {
+        display: block;
+        align-items: center;
+        margin-left: -1rem;
+        width: 100%;
+
+        .containers {
+            margin-top: 5rem;
+        }
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .footer-social ul {
+        flex-direction: column;
+    }
+
+    .footer-bottom ul {
+        flex-direction: column;
+    }
+}
