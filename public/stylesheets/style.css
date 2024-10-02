@@ -18,12 +18,17 @@ html,body {
     margin-top: 20px;
 }
 
-.aryanlogo a {
+.aryanlogo {
     text-decoration: none;
     font-family: "Bebas Neue", sans-serif;
     font-weight: 600;
     font-style: normal;
     font-size: 35px;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
 }
 
 /* .log-in-btn {
@@ -41,7 +46,7 @@ html,body {
 
 
     li {
-        transition: 0.5s;
+        transition: 0.1s;
         cursor: pointer;
 
 
@@ -60,7 +65,7 @@ html,body {
 .nav-connect {
     padding: 15px 50px;
     font-size: 16px;
-    border-radius: 16px 16px 16px 16px;
+    border-radius: 16px;
     background: #00bfa6;
     font-family: "Inter", Sans-serif;
     cursor: pointer;
