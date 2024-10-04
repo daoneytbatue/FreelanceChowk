@@ -24,6 +24,14 @@ app.get('/signup', (req, res) => {
     res.render("signup");
 })
 
+app.get('/FreelancerDetails', (req, res) => {
+    res.send("Working on Freelancer Details");
+})
+
+app.get('/ClientDetails', (req, res) => {
+    res.send("Working on Clients Details");
+})
+
 app.post('/create', async (req, res) => {
     let { username, email, password, isFreelancer } = req.body;
 
@@ -40,8 +48,12 @@ app.post('/create', async (req, res) => {
 
     let token = jwt.sign({ email }, "My_Secret_Token");
     res.cookie("token", token);
-
-    res.send(createdUser);
+    
+    if (isFreelancer) {
+        res.redirect("/FreelancerDetails");
+    } else {
+        res.redirect("/ClientDetails");
+    }
 })
 
 app.post('/logout', async (req, res) => {
