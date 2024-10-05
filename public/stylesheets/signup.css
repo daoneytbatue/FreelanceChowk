@@ -125,3 +125,24 @@ form {
     color: #20dbc2;
     border-color: #00bfa6;
 }
+
+input[type="radio"] {
+    position: absolute;
+    left: -999px;
+}
+
+.btn-secondary {
+    margin: 20px;
+    padding: 12px;
+}
+
+
+
+.radio-btn {
+    margin: 15px;
+}
+
+
+.radio-btn h4 {
+    color: #444;
+}
