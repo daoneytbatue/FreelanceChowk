@@ -30,25 +30,34 @@
                     <li>PRICING</li>
                 </ul>
             </div>
-            
+
         </div>
     </nav>
 
     <main>
         <section class="sign-up">
-            <form action="/create" class="sign-up-form" method = "post">
+            <form action="/create" class="sign-up-form" method="post">
                 <h2 class="title">Sign up</h2>
                 <div class="input-field">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Username" name = "username">
+                    <input type="text" placeholder="Username" name="username">
                 </div>
                 <div class="input-field">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Email" name = "email">
+                    <input type="email" placeholder="Email" name="email">
                 </div>
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Password" name = "password">
+                    <input type="password" placeholder="Password" name="password">
+                </div>
+                <div class="radio-btn">
+                    <input type="radio" class="freelancer-btn option" value="Freelancer" name="options" id="option1"
+                        autocomplete="off" checked>
+                    <label class="btn btn-secondary" for="option1">Freelancer</label>
+
+                    <input type="radio" class="client-btn option" name="options" value="Client" id="option2"
+                        autocomplete="off">
+                    <label class="btn btn-secondary" for="option2">Client</label>
                 </div>
                 <input type="submit" class="btn" value="Sign up" />
                 <p class="social-text">Or Sign up with social platforms</p>
