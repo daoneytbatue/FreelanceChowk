@@ -2,71 +2,76 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/stylesheets/signup.css">
-  <link rel="stylesheet" href="/stylesheets/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-  <title>Log-in</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/signup.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <title>Log-in</title>
 </head>
 
 <body>
-  <nav>
-    <div class='navbar'>
-      <div class='aryanlogo'>
-        <a href="/">Freelance<span class="free">Chowk</span></a>
-      </div>
-      <div class="menu-btn">
-        <button class="icon" onclick="mega_menu()">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <ul class='nav-menu'>
-          <li>FEATURES</li>
-          <li>SOLUTIONS</li>
-          <li>RESOURCES</li>
-          <li>PRICING</li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <nav class="navbar">
+        <div class='aryanlogo'>
+            <a href="/">Freelance<span class="free">Chowk</span></a>
+        </div>
 
-  <main>
-    <section class="sign-up">
-      <form action="/login" class="sign-up-form" method="post">
-        <h2 class="title">Sign in</h2>
-        <div class="input-field">
-          <i class="fas fa-user"></i>
-          <input type="text" placeholder="Username & email" />
+        <div class="menu-btn">
+            <button class="icon" onclick="mega_menu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class='nav-menu'>
+                <li>FEATURES
+                <li>SOLUTIONS
+                <li>RESOURCES
+                <li>PRICING
+            </ul>
         </div>
-        <!-- <div class="input-field">
-                    <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Email" />
-                </div> -->
-        <div class="input-field">
-          <i class="fas fa-lock"></i>
-          <input type="password" placeholder="Password" />
-        </div>
-        <input type="submit" class="btn" value="Sign in" />
-        <p class="social-text">Or Sign in with social platforms</p>
-        <div class="social-media">
-          <a href="#" class="social-icon">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" class="social-icon">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" class="social-icon">
-            <i class="fab fa-google"></i>
-          </a>
-          <a href="#" class="social-icon">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-        <p>Don't have an account? <a href="/signup">Sign-up</a></p>
-      </form>
-    </section>
-  </main>
+    </nav>
+
+    <main class="sign-up">
+        <form action="/login" class="sign-up-form" method="post">
+            <h2 class="title">Sign in</h2>
+
+            <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Username & email" />
+            </div>
+
+            <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Password" />
+            </div>
+
+            <input type="submit" class="btn" value="Sign in" />
+
+            <p class="social-text">Or Sign in with social platforms</p>
+
+            <div class="social-media">
+                <a href="#" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <a href="#" class="social-icon">
+                    <i class="fab fa-google"></i>
+                </a>
+
+                <a href="#" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+
+            <p>Don't have an account? <a href="/signup">Sign-up</a></p>
+        </form>
+    </main>
 </body>
+
+</html>

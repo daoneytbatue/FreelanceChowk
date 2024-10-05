@@ -1,17 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
-* {
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-html,
-body {
-    overflow-x: hidden;
+html,body {
+    /* font-family: "Gilroy-Medium-☞", Helvetica; */
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100%;
 }
 
-body,
-input {
-    font-family: 'Poppins', sans-serif;
+.navbar{
+    background: #800000;
 }
 
 .sing-up-frame {
@@ -22,17 +25,13 @@ input {
 
 form {
     display: flex;
-    /*Distributes Flex-items along the Cross Axis */
     align-items: center;
-    /*Distributes Flex-items along the Main Axis */
     justify-content: center;
     flex-direction: column;
-    /* overflow: hidden; */
     padding: 0rem 5rem;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     transition: 0.2s 0.7s ease-in-out;
-    /* border: 1px solid black; */
     padding: 1em;
     padding-top: 7em;
 }

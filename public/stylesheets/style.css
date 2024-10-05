@@ -1,14 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html,body {
+html,
+body {
     font-family: "Gilroy-Medium-☞", Helvetica;
     width: 100%;
     height: 100%;
-    /* overflow: hidden; */
 }
 
 .navbar {
@@ -49,12 +49,9 @@ a {
         transition: 0.1s;
         cursor: pointer;
 
-
         &:hover {
             transform: scale(1.05);
             color: #00bfa6;
-
-
         }
     }
 
@@ -138,7 +135,6 @@ a {
 
     .nav-menu.show {
         display: block;
-        /* Add any additional styles for the visible menu */
     }
 
     .icon {
@@ -190,10 +186,8 @@ a {
     }
 
     .images {
-        /* justify-content: space-around; */
         flex-direction: column;
         overflow: hidden;
-
     }
 
     .images .img-title {
@@ -213,7 +207,6 @@ a {
 .main {
     margin-top: 5rem;
     display: flex;
-
 }
 
 .headline {
@@ -336,9 +329,6 @@ a {
 
 .text {
     text-align: center;
-    /* margin: 50px; */
-    /* margin-left: 250px; */
-    /* margin-right: 250px; */
     font-size: 19px;
     font-family: "Inter", Sans-serif;
     color: #303030;
@@ -356,7 +346,6 @@ a {
     justify-content: space-around;
     display: flex;
     overflow: hidden;
-
 }
 
 .img-title {
@@ -515,7 +504,7 @@ a {
     }
 }
 
-.card-img-top{
+.card-img-top {
     height: 200px;
 }
 

@@ -9,7 +9,7 @@ const userModel = require('./models/user');
 
 app.set("view engine", "ejs");
 app.use(express.json());
-app.use(express.urlencoded({ extended : true }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
@@ -24,11 +24,11 @@ app.get('/signup', (req, res) => {
     res.render("signup");
 })
 
-app.get('/FreelancerDetails', (req, res) => {
+app.get('/create/FreelancerDetails', (req, res) => {
     res.send("Working on Freelancer Details");
 })
 
-app.get('/ClientDetails', (req, res) => {
+app.get('/create/ClientDetails', (req, res) => {
     res.send("Working on Clients Details");
 })
 
@@ -48,11 +48,11 @@ app.post('/create', async (req, res) => {
 
     let token = jwt.sign({ email }, "My_Secret_Token");
     res.cookie("token", token);
-    
+
     if (isFreelancer) {
-        res.redirect("/FreelancerDetails");
+        res.redirect("/create/FreelancerDetails");
     } else {
-        res.redirect("/ClientDetails");
+        res.redirect("/create/ClientDetails");
     }
 })
 

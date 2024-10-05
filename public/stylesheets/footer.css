@@ -23,22 +23,22 @@ footer {
     margin-bottom: 20px;
 }
 
-.footer-column ul {
+.footer-column {
     list-style: none;
     padding: 0;
 }
 
-.footer-column ul li {
+.footer-column li {
     margin-bottom: 10px;
 }
 
-.footer-column ul li a {
-    color: #bbb;
+.footer-column li a {
     text-decoration: none;
+    color: #bbb;
     transition: color 0.3s ease;
 }
 
-.footer-column ul li a:hover {
+.footer-column li a:hover {
     color: #fff;
 }
 
