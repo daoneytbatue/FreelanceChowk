@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/questionare.css">
+    <title>Freelancer Questionnaire</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="aryanlogo">
+                <a href="index.html">Freelance<span class="free">Chowk</span></a>
+            </div>
+            <div class="menu-btn">
+                <button class="icon" onclick="mega_menu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul class="nav-menu">
+                    <li>HOME</li>
+                    <li>FEATURES</li>
+                    <li>SOLUTIONS</li>
+                    <li>RESOURCES</li>
+                    <li>PRICING</li>
+                </ul>
+            </div>
+            <div class="log-in-btn">
+                <a class="nav-connect" href="login.html">
+                    Log-in
+                </a>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        <form id="questionnaire">
+            <section class="personal_info">
+                <fieldset>
+                    <legend>
+                        <h2>Personal Information</h2>
+                    </legend>
+                    <div class="name">
+                        <label for="name">Full Name </label><br><br>
+                        <input type="text" id="name1" required placeholder="First Name">
+                        <input type="text" id="name2" required placeholder="Last Name">
+                    </div><br>
+
+                    <label for="email">E-mail:</label><br><br>
+                    <input type="email" id="email" required placeholder="E-mail">
+                    <br><br>
+
+                    <label for="phone">Phone Number:</label><br><br>
+                    <input type="tel" id="phone" required placeholder="Contact Number">
+                </fieldset>
+            </section>
+
+            <section class="skills">
+                <fieldset class="your_skills">
+                    <legend>
+                        <h2>Skills</h2>
+                    </legend>
+                    <label for="inp-1">
+                        <input type="checkbox" name="C">C
+                        </input>
+                    </label>
+                    <label for="inp-2">
+                        <input type="checkbox" name="C++">C++
+                        </input>
+                    </label>
+                    <label for="inp-3">
+                        <input type="checkbox" name="C#">C#
+                        </input>
+                    </label>
+                    <label for="inp-4">
+                        <input type="checkbox" name="Java">Java
+                    </label>
+                    <label for="inp-5">
+                        <input type="checkbox" name="Python">Python
+                        </input>
+                    </label>
+                    <label for="inp-6">
+                        <input type="checkbox" name="JavaScript">JavaScript
+                        </input>
+                    </label>
+                    <label for="inp-7">
+                        <input type="checkbox" name="React">React
+                        </input>
+                    </label>
+                    <label for="inp-7">
+                        <input type="checkbox" name="Angular">Angular
+                        </input>
+                    </label>
+                    <label for="inp-7">
+                        <input type="checkbox" name="Django">Django
+                        </input>
+                    </label>
+                    <label for="inp-7">
+                        <input type="checkbox" name="SpringBoot">Spring
+                        </input>
+                    </label>
+                </fieldset>
+            </section>
+
+            <section class="experience">
+                <fieldset>
+                    <legend>
+                        <h2>Experience</h2>
+                    </legend>
+                    <label for="experience">Briefly describe your experience</label><br><br>
+                    <textarea id="experience" rows="4" required></textarea><br><br>
+
+                    <label for="portfolio">Link to your portfolio</label><br><br>
+                    <input type="url" id="portfolio" placeholder="Portfolio Link">
+                </fieldset>
+            </section>
+
+            <section class="project_preference">
+                <fieldset>
+                    <legend>
+                        <h2>Project Preferences</h2>
+                    </legend>
+                    <label for="project-type">Preferred Project Type</label><br><br>
+                    <select id="project-type" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="short-term">Short-term</option>
+                        <option value="long-term">Long-term</option>
+                        <option value="part-time">Part-time</option>
+                    </select>
+                    <br><br>
+
+                    <label for="availability">Availability</label><br><br>
+                    <input type="text" id="availability" placeholder="e.g., 20 hours/week" required>
+                </fieldset>
+            </section>
+            <br><br>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </main>
+
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>
