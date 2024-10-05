@@ -15,7 +15,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
+    padding-top: 20px;
 }
 
 .aryanlogo {
