@@ -2,56 +2,48 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <link rel="stylesheet" href="stylesheets/questionare.css">
     <title>Freelancer Questionnaire</title>
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/questionare.css">
 </head>
 
 <body>
-    <nav>
-        <div class="navbar">
-            <div class="aryanlogo">
-                <a href="index.html">Freelance<span class="free">Chowk</span></a>
-            </div>
-            <div class="menu-btn">
-                <button class="icon" onclick="mega_menu()">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-                <ul class="nav-menu">
-                    <li>HOME</li>
-                    <li>FEATURES</li>
-                    <li>SOLUTIONS</li>
-                    <li>RESOURCES</li>
-                    <li>PRICING</li>
-                </ul>
-            </div>
-            <div class="log-in-btn">
-                <a class="nav-connect" href="login.html">
-                    Log-in
-                </a>
-            </div>
+    <nav class="navbar">
+        <div class="aryanlogo">
+            <a href="/">Freelance<span class="free">Chowk</span></a>
+        </div>
+        <div class="menu-btn">
+            <button class="icon" onclick="mega_menu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li>FEATURES
+                <li>SOLUTIONS
+                <li>RESOURCES
+                <li>PRICING
+            </ul>
         </div>
     </nav>
+    
     <main class="container">
-        <form id="questionnaire">
+        <form id="questionnaire" method="post" action ="/create/FreelancerDetails">
             <section class="personal_info">
                 <fieldset>
                     <legend>
                         <h2>Personal Information</h2>
                     </legend>
                     <div class="name">
-                        <label for="name">Full Name </label><br><br>
+                        <label for="name">Full Name </label>
                         <input type="text" id="name1" required placeholder="First Name">
                         <input type="text" id="name2" required placeholder="Last Name">
-                    </div><br>
+                    </div>
 
-                    <label for="email">E-mail:</label><br><br>
+                    <label for="email">E-mail:</label>
                     <input type="email" id="email" required placeholder="E-mail">
-                    <br><br>
+                    
 
-                    <label for="phone">Phone Number:</label><br><br>
+                    <label for="phone">Phone Number:</label>
                     <input type="tel" id="phone" required placeholder="Contact Number">
                 </fieldset>
             </section>
@@ -108,10 +100,10 @@
                     <legend>
                         <h2>Experience</h2>
                     </legend>
-                    <label for="experience">Briefly describe your experience</label><br><br>
-                    <textarea id="experience" rows="4" required></textarea><br><br>
+                    <label for="experience">Briefly describe your experience</label>
+                    <textarea id="experience" rows="4" required></textarea>
 
-                    <label for="portfolio">Link to your portfolio</label><br><br>
+                    <label for="portfolio">Link to your portfolio</label>
                     <input type="url" id="portfolio" placeholder="Portfolio Link">
                 </fieldset>
             </section>
@@ -121,20 +113,20 @@
                     <legend>
                         <h2>Project Preferences</h2>
                     </legend>
-                    <label for="project-type">Preferred Project Type</label><br><br>
+                    <label for="project-type">Preferred Project Type</label>
                     <select id="project-type" required>
                         <option value="" disabled selected>Select an option</option>
                         <option value="short-term">Short-term</option>
                         <option value="long-term">Long-term</option>
                         <option value="part-time">Part-time</option>
                     </select>
-                    <br><br>
+                    
 
-                    <label for="availability">Availability</label><br><br>
+                    <label for="availability">Availability</label>
                     <input type="text" id="availability" placeholder="e.g., 20 hours/week" required>
                 </fieldset>
             </section>
-            <br><br>
+            
             <button type="submit" class="btn">Submit</button>
         </form>
     </main>
