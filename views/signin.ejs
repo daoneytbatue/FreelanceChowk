@@ -13,62 +13,54 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class='aryanlogo'>
-            <a href="/">Freelance<span class="free">Chowk</span></a>
-        </div>
-
-        <div class="menu-btn">
-            <button class="icon" onclick="mega_menu()">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
-            <ul class='nav-menu'>
-                <li>FEATURES
-                <li>SOLUTIONS
-                <li>RESOURCES
-                <li>PRICING
-            </ul>
+    <nav>
+        <div class='navbar'>
+            <div class='aryanlogo'>
+                <a href="index.html">Freelance<span class="free">Chowk</span></a>
+            </div>
+            <div class="menu-btn">
+                <button class="icon" onclick="mega_menu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul class='nav-menu'>
+                    <li>HOME</li>
+                    <li>FEATURES</li>
+                    <li>SOLUTIONS</li>
+                    <li>RESOURCES</li>
+                    <li>PRICING</li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <main class="sign-up">
-        <form action="/login" class="sign-up-form" method="post">
+        <form action="/" class="sign-up-form" method="post">
             <h2 class="title">Sign in</h2>
-
             <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Username & email" />
+                <input type="text" placeholder="Username or email" />
             </div>
-
             <div class="input-field">
                 <i class="fas fa-lock"></i>
                 <input type="password" placeholder="Password" />
             </div>
-
             <input type="submit" class="btn" value="Sign in" />
-
             <p class="social-text">Or Sign in with social platforms</p>
-
             <div class="social-media">
                 <a href="#" class="social-icon">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-
                 <a href="#" class="social-icon">
                     <i class="fab fa-twitter"></i>
                 </a>
-
                 <a href="#" class="social-icon">
                     <i class="fab fa-google"></i>
                 </a>
-
                 <a href="#" class="social-icon">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
             </div>
-
-            <p>Don't have an account? <a href="/signup">Sign-up</a></p>
+            <p>Don't have an account? <a href="sign-up.html">sign-up</a></p>
         </form>
     </main>
 </body>
