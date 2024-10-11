@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 // mongoose.connect("mongodb://127.0.0.1:27017/FreelanceChowk");
 
-const freelancerSchema = mongoose.Schema({
+const clientSchema = mongoose.Schema({
     user : {
         type: mongoose.Schema.Types.ObjectId,
         ref : "user"
@@ -28,4 +28,4 @@ const freelancerSchema = mongoose.Schema({
     portfolio: [String],
 })
 
-module.exports = mongoose.model('freelancer', freelancerSchema);
+module.exports = mongoose.model('Client', clientSchema);
