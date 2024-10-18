@@ -6,6 +6,8 @@ const jwt = require('jsonwebtoken');
 const cookie = require('cookie-parser');
 const path = require('path');
 const userModel = require('./models/user');
+const freelancerModel = require('./models/freelancer');
+const clientModel = require('./models/client');
 
 app.set("view engine", "ejs");
 app.use(express.json());
@@ -24,20 +26,15 @@ app.get('/signup', (req, res) => {
     res.render("signup");
 })
 
-app.get('/create/FreelancerDetails', (req, res) => {
-    res.send("Working on Freelancer Details");
-})
-
-app.get('/create/ClientDetails', (req, res) => {
-    res.send("Working on Clients Details");
-})
-
 app.post('/create', async (req, res) => {
     let { username, email, password, isFreelancer } = req.body;
 
+    let user = await userModel.findOne({email});
+    if(user) return res.status(500).send("Something is Wrong here");
+
     bcrypt.genSalt(10, (err, salt) => {
         bcrypt.hash(password, salt, async (err, hash) => {
-            let createdUser = await userModel.create({
+            let user = await userModel.create({
                 username,
                 email,
                 password: hash,
@@ -54,6 +51,23 @@ app.post('/create', async (req, res) => {
     } else {
         res.redirect("/create/ClientDetails");
     }
+})
+
+app.get('/create/FreelancerDetails', (req, res) => {
+    // res.send("Working on Freelancer Details");
+    res.render("FL Details")
+})
+
+app.get('/create/ClientDetails', (req, res) => {
+    res.send("Working on Clients Details");
+})
+
+app.post('/create/FreelancerDetails', async (req, res) => {
+    res.send("Working on Freelancer Details post");
+})
+
+app.post('/create/ClientDetails', async (req, res) => {
+    res.send("Working on Clients Details post");
 })
 
 app.post('/logout', async (req, res) => {
