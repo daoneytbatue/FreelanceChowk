@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="stylesheets/dashoard.css">
+    <link rel="stylesheet" href="stylesheets/myjobs.css">
+    <link rel="stylesheet" href="stylesheets/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="dashboard-header">
+        <div class="logo">
+            <h1><a href="index.html">FREELANCE<span>CHOWK</span></a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <!-- <li><a href="#">Profile</a></li> -->
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Proposals</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">Earnings</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+        <div class="logout-button">
+            <button></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="sidebar">
+            <ul>
+                <li><a href="freelancer_dashboard.ejs">Overview</a></li>
+                <li><a href="myjobs.ejs">My Jobs</a></li>
+                <li><a href="proposals.ejs">Proposals</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">Earnings</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </section>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1>My Jobs</h1>
+            <div class="job-tabs">
+                <button class="tab-btn active" onclick="showTab('active-jobs')">Active Jobs</button>
+                <button class="tab-btn" onclick="showTab('pending-proposals')">Pending Proposals</button>
+                <button class="tab-btn" onclick="showTab('completed-jobs')">Completed Jobs</button>
+            </div>
+
+            <!-- Active Jobs -->
+            <div id="active-jobs" class="job-section">
+                <h2>Active Jobs</h2>
+                <div class="job-card">
+                    <h3>Website Development</h3>
+                    <p>Client: John Doe</p>
+                    <p>Status: In Progress</p>
+                    <p>Payment: $500</p>
+                    <button class="btn">Send Message</button>
+                    <button class="btn">Mark as Completed</button>
+                </div>
+                <div class="job-card">
+                    <h3>Graphic Design</h3>
+                    <p>Client: Jane Smith</p>
+                    <p>Status: In Progress</p>
+                    <p>Payment: $200</p>
+                    <button class="btn">Send Message</button>
+                    <button class="btn">Mark as Completed</button>
+                </div>
+            </div>
+
+            <!-- Pending Proposals -->
+            <div id="pending-proposals" class="job-section hidden">
+                <h2>Pending Proposals</h2>
+                <div class="job-card">
+                    <h3>SEO Optimization</h3>
+                    <p>Client: Alex Brown</p>
+                    <p>Status: Proposal Sent</p>
+                    <p>Payment: $300</p>
+                    <button class="btn">Send Message</button>
+                </div>
+            </div>
+
+            <!-- Completed Jobs -->
+            <div id="completed-jobs" class="job-section hidden">
+                <h2>Completed Jobs</h2>
+                <div class="job-card">
+                    <h3>Mobile App Development</h3>
+                    <p>Client: Alice Green</p>
+                    <p>Status: Completed</p>
+                    <p>Payment: $1000</p>
+                    <button class="btn">Send Message</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>For Clients</h3>
+                <ul>
+                    <li><a href="#">How to hire</a></li>
+                    <li><a href="#">Talent Marketplace</a></li>
+                    <li><a href="#">Project Catalog</a></li>
+                    <li><a href="#">Hire an agency</a></li>
+                    <li><a href="#">Enterprise</a></li>
+                    <li><a href="#">Any Hire</a></li>
+                    <li><a href="#">Contract-to-hire</a></li>
+                    <li><a href="#">Direct Contracts</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>For Talent</h3>
+                <ul>
+                    <li><a href="#">How to find work</a></li>
+                    <li><a href="#">Direct Contracts</a></li>
+                    <li><a href="#">Find freelance jobs worldwide</a></li>
+                    <li><a href="#">Find freelance jobs in the USA</a></li>
+                    <li><a href="#">Win work with ads</a></li>
+                    <li><a href="#">Exclusive resources with Freelancer Plus</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Help & support</a></li>
+                    <li><a href="#">Success stories</a></li>
+                    <li><a href="#">Upwork reviews</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Affiliate programme</a></li>
+                    <li><a href="#">Free Business Tools</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Investor relations</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Our impact</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Trust, safety & security</a></li>
+                    <li><a href="#">Modern slavery statement</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <h3>Follow us</h3>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fab fa-x-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 - 2034 FreelanceChowk. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Cookie Settings</a></li>
+                <li><a href="#">Accessibility</a></li>
+            </ul>
+        </div>
+    </footer>
+    </div>
+
+
+
+
+    <script src="javascript/script.js"></script>
+    <script src="javascript/myjobs.js"></script>
+
+</body>
+
+</html>
