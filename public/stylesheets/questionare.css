@@ -38,6 +38,7 @@ fieldset {
 .your_skills {
     text-align: left;
     margin-bottom: 25px;
+    /* height: 200px; */
 }
 
 .your_skills input[type="radio"] {
@@ -46,7 +47,8 @@ fieldset {
 }
 
 .your_skills label {
-    display: block;
+    display: flex;
+    flex-direction: row;
     margin-bottom: 10px;
     font-size: 20px;
 }
@@ -56,6 +58,15 @@ fieldset {
     border-radius: 2px;
     font-family: "Gilroy-Medium-☞", Helvetica;
     padding: 10px;
+}
+
+.your_skills input[type="text"]{
+    width: 150px;
+    border: none !important;
+    border-bottom: 1px solid lightgray !important;
+    border-radius: 0px;
+    height: 19px;
+    margin-left: 1em;
 }
 
 input[type="text"],
@@ -87,6 +98,7 @@ input[type="url"] {
     border-radius: 10px;
     width: 500px;
     height: 100px;
+    resize: none;
 }
 
 .btn {
@@ -140,4 +152,5 @@ label {
     border-radius: 10px;
     width: 500px;
     height: 100px;
+    resize: none;
 }
