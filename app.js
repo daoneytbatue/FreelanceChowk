@@ -20,20 +20,24 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
+app.get("/test", (req, res) => {
+    res.render("FL Details");
+});
+
 app.get("/signin", (req, res) => {
     res.render("signin");
 });
 
 app.post("/signin", async (req, res) => {
-    try{
-        let {email, password} = req.body;
+    try {
+        let { email, password } = req.body;
 
         let user = await userModel.findOne({ email });
-        
+
         if (!user) {
             return res.status(401).alert("User already exists");
         }
-    } catch(error){
+    } catch (error) {
         console.error(error);
         res.status(500).send("Server error");
     }
@@ -88,12 +92,47 @@ app.get("/create/ClientDetails", isLoggedIn, (req, res) => {
 });
 
 app.post("/create/FreelancerDetails", async (req, res) => {
-    res.send("Working on Freelancer Details post");
+    try {
+        let { firstName, lastName, phoneNo, skills, ExpDescription, portfolio, ProjectPre } = req.body;
+
+        let token = req.cookies.token;
+
+        jwt.verify(token, "My_Secret_Token", async (err, decoded) => {
+            if (err) {
+                console.error(err);
+                return res.status(401).send("Invalid token");
+            }
+
+            let userDetails = await freelancerModel.create({
+                firstName,
+                lastName,
+                phoneNo,
+                skills,
+                ExpDescription,
+                portfolio,
+                ProjectPre,
+                user: decoded.userId,
+            });
+
+            let user = await userModel.findOne({ _id: decoded.userId });
+            user.FL_details = userDetails._id;
+            await user.save();
+
+            res.status(200).redirect("/user/FreelancerDashboard");
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Server error");
+    }
 });
 
 app.post("/create/ClientDetails", async (req, res) => {
     res.send("Working on Clients Details post");
 });
+
+app.get("/user/FreelancerDashboard", isLoggedIn, (req, res) =>{
+    res.render("FL Details")
+})
 
 app.post("/logout", async (req, res) => {
     res.cookie("token", "");

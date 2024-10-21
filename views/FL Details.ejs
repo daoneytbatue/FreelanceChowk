@@ -2,35 +2,30 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet/style.css">
     <link rel="stylesheet" href="stylesheet/questionare.css">
     <title>Freelancer Questionnaire</title>
 </head>
 
 <body>
-    <nav>
-        <div class="navbar">
-            <div class="aryanlogo">
-                <a href="index.html">Freelance<span class="free">Chowk</span></a>
-            </div>
-            <div class="menu-btn">
-                <button class="icon" onclick="mega_menu()">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="/#main">HOME</a>
-                    <li><a href="/#service">SERVICES</a>
-                    <li><a href="/#feature">FEATURES</a>
-                    <li><a href="/#">ABOUT</a>
-                </ul>
-            </div>
-            <div class="log-in-btn">
-                <a class="nav-connect" href="login.html">
-                    Log-in
-                </a>
-            </div>
+    <nav class="navbar">
+        <div class="aryanlogo">
+            <a href="/">Freelance<span class="free">Chowk</span></a>
+        </div>
+        <div class="menu-btn">
+            <button class="icon" onclick="mega_menu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#">SERVICES</a>
+                <li><a href="#">FEATURES</a>
+                <li><a href="#">ABOUT</a>
+            </ul>
+        </div>
+        <div class="log-in-btn">
+            <a class="nav-connect" href="/logout">
+                Log-Out
+            </a>
         </div>
     </nav>
 
@@ -42,15 +37,14 @@
                         <h2>Personal Information</h2>
                     </legend>
                     <div class="name">
-                        <label for="name">Full Name </label><br><br>
-                        <input type="text" id="name1" required placeholder="First Name">
-                        <input type="text" id="name2" required placeholder="Last Name">
-
+                        <label for="name">Full Name: </label>
+                        <input type="text" id="name1" required placeholder="First Name" name="firstName">
+                        <input type="text" id="name2" required placeholder="Last Name" name="lastName">
                     </div>
 
                     <div>
                         <label for="phone">Phone Number: </label>
-                        <input type="tel" id="phone" required placeholder="Contact Number">
+                        <input type="tel" id="phone" required placeholder="Phone Number" name="phoneNo">
                     </div>
                 </fieldset>
             </section>
@@ -60,41 +54,36 @@
                     <legend>
                         <h2>Skills</h2>
                     </legend>
-                    <label for="inp-1">
-                        <input type="checkbox" name="C">C
-                        </input>
-                    </label>
-                    <label for="inp-2">
-                        <input type="checkbox" name="C++">C++
-                    </label>
-                    <label for="inp-3">
-                        <input type="checkbox" name="C#">C#
-                    </label>
-                    <label for="inp-4">
-                        <input type="checkbox" name="Java">Java
-                    </label>
-                    <label for="inp-5">
-                        <input type="checkbox" name="Python">Python
-                    </label>
-                    <label for="inp-6">
-                        <input type="checkbox" name="JavaScript">JavaScript
-                    </label>
-                    <label for="inp-7">
-                        <input type="checkbox" name="React">React
-                    </label>
-                    <label for="inp-7">
-                        <input type="checkbox" name="Angular">Angular
-                    </label>
-                    <label for="inp-7">
-                        <input type="checkbox" name="Django">Django
-                    </label>
-                    <label for="inp-7">
-                        <input type="checkbox" name="SpringBoot">Spring
-                    </label>
-                    <label for="inp-7">
-                        <input type="checkbox" name="other">others:
-                        <input type="text">
-                    </label>
+
+                    <input type="checkbox" name="skills" id="C" value="C">
+                    <label for="C">C</label>
+
+                    <input type="checkbox" name="skills" id="C++" value="C++">
+                    <label for="C++">C++</label>
+
+                    <input type="checkbox" name="skills" id="C#" value="C#">
+                    <label for="C#">C#</label>
+
+                    <input type="checkbox" name="skills" id="Java" value="Java">
+                    <label for="Java">Java</label>
+
+                    <input type="checkbox" name="skills" id="Python" value="Python">
+                    <label for="Python">Python</label>
+
+                    <input type="checkbox" name="skills" id="JavaScript" value="JavaScript">
+                    <label for="JavaScript">JavaScript</label>
+
+                    <input type="checkbox" name="skills" id="React" value="React">
+                    <label for="React">React</label>
+
+                    <input type="checkbox" name="skills" id="Angular" value="Angular">
+                    <label for="Angular">Angular</label>
+
+                    <input type="checkbox" name="skills" id="Django" value="Django">
+                    <label for="Django">Django</label>
+
+                    <input type="checkbox" name="skills" id="SpringBoot" value="SpringBoot">
+                    <label for="SpringBoot">SpringBoot</label>
                 </fieldset>
             </section>
 
@@ -103,11 +92,11 @@
                     <legend>
                         <h2>Experience</h2>
                     </legend>
-                    <label for="experience">Briefly describe your experience</label><br><br>
-                    <textarea id="experience" rows="4" required></textarea><br><br>
+                    <label for="experience">Briefly describe your experience</label>
+                    <textarea id="experience" rows="4" required name="ExpDescription"></textarea>
 
-                    <label for="portfolio">Link to your portfolio</label><br><br>
-                    <input type="url" id="portfolio" placeholder="Portfolio Link">
+                    <label for="portfolio">Link to your portfolio</label>
+                    <input type="url" id="portfolio" placeholder="Portfolio Link" name="portfolio">
                 </fieldset>
             </section>
 
@@ -116,19 +105,17 @@
                     <legend>
                         <h2>Project Preferences</h2>
                     </legend>
-                    <label for="project-type">Preferred Project Type</label><br><br>
-                    <select id="project-type" required>
+                    <label for="project-type">Preferred Project Type</label>
+                    <select id="project-type" required name="ProjectPre">
                         <option value="" disabled selected>Select an option</option>
                         <option value="short-term">Short-term</option>
                         <option value="long-term">Long-term</option>
                         <option value="part-time">Part-time</option>
                     </select>
-
-                    <label for="availability">Availability</label><br><br>
-                    <input type="text" id="availability" placeholder="e.g., 20 hours/week" required>
                 </fieldset>
             </section>
-            <button type="submit" class="btn">Submit</button>
+
+            <input type="submit" class="btn" value="Submit">
         </form>
     </main>
 
