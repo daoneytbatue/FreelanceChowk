@@ -12,6 +12,7 @@ const isLoggedIn = require("./Middlewares/isLoggedIn");
 
 app.set("view engine", "ejs");
 app.use(express.json());
+app.use(cookie());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -23,8 +24,19 @@ app.get("/signin", (req, res) => {
     res.render("signin");
 });
 
-app.post("/signin", (req, res) => {
-    res.send("Working on it");
+app.post("/signin", async (req, res) => {
+    try{
+        let {email, password} = req.body;
+
+        let user = await userModel.findOne({ email });
+        
+        if (!user) {
+            return res.status(401).alert("User already exists");
+        }
+    } catch(error){
+        console.error(error);
+        res.status(500).send("Server error");
+    }
 });
 
 app.get("/signup", (req, res) => {
@@ -35,15 +47,16 @@ app.post("/create", async (req, res) => {
     try {
         let { username, email, password, isFreelancer } = req.body;
 
-        // Check if the user already exists
         let user = await userModel.findOne({ email });
         if (user) {
-            return res.status(400).alert("User already exists").redirect("/signin");
+            return res.redirect("/signin");
         }
+
         const salt = await bcrypt.genSalt(10);
         const hash = await bcrypt.hash(password, salt);
 
-        // Create the user with the hashed password
+        isFreelancer = isFreelancer === "true";
+
         user = await userModel.create({
             username,
             email,
@@ -51,27 +64,22 @@ app.post("/create", async (req, res) => {
             isFreelancer,
         });
 
-        // Generate a JWT token
-        let token = jwt.sign({ email, userId: user._id }, "My_Secret_Token");
+        let token = jwt.sign({ email, userId: user._id, isFreelancer }, "My_Secret_Token");
 
-        // Set the token in cookies
         res.cookie("token", token);
 
-        // Redirect based on the user type
         if (isFreelancer) {
             res.redirect("/create/FreelancerDetails");
         } else {
             res.redirect("/create/ClientDetails");
         }
     } catch (error) {
-        // Handle any errors
         console.error(error);
         res.status(500).send("Server error");
     }
 });
 
 app.get("/create/FreelancerDetails", isLoggedIn, (req, res) => {
-    // res.send("Working on Freelancer Details");
     res.render("FL Details");
 });
 
@@ -91,10 +99,6 @@ app.post("/logout", async (req, res) => {
     res.cookie("token", "");
     res.redirect("/");
 });
-
-// Middlewares
-
-
 
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
