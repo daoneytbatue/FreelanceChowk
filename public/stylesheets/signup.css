@@ -125,3 +125,11 @@ input[type="radio"] {
 .radio-btn h4 {
     color: #444;
 }
+
+.hidden-toggles{
+    display: flex;
+    background-color: red;
+    padding: 20px;
+    margin-right: 20px;
+    margin-left: 20px;   
+}

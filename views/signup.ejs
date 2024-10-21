@@ -37,22 +37,28 @@
 
             <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Username" name="username" required/>
+                <input type="text" placeholder="Username" name="username" required>
             </div>
 
             <div class="input-field">
                 <i class="fas fa-envelope"></i>
-                <input type="email" placeholder="Email" name="email" required/>
+                <input type="email" placeholder="Email" name="email" required>
             </div>
 
             <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Password" name="password" required/>
+                <input type="password" placeholder="Password" name="password" required>
             </div>
 
             <div class="hidden-toggles">
-                <label><input type="radio" name="isFreelancer" value="True"> Freelancer</label>
-                <label><input type="radio" name="isFreelancer" value="False"> Client</label>
+                <label for="isFreelancer">Freelancer</label>
+                <span>
+                    <input class="radio-btn" type="radio" name="isFreelancer" value="True">
+                </span>
+                <label>Client</label>
+                <span>
+                    <input class="radio-btn" type="radio" name="isFreelancer" value="False"> 
+                </span>
             </div>
 
             <input type="submit" class="btn" value="Sign up" />
