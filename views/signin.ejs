@@ -4,8 +4,8 @@
 <head>
     <title>Log-in</title>
 
-    <link rel="stylesheet" href="/stylesheets/signup.css">
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/signup.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -13,42 +13,43 @@
 </head>
 
 <body>
-    <nav>
-        <div class='navbar'>
-            <div class='aryanlogo'>
-                <a href="index.html">Freelance<span class="free">Chowk</span></a>
-            </div>
-            <div class="menu-btn">
-                <button class="icon" onclick="mega_menu()">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-                <ul class='nav-menu'>
-                    <li>HOME</li>
-                    <li>FEATURES</li>
-                    <li>SOLUTIONS</li>
-                    <li>RESOURCES</li>
-                    <li>PRICING</li>
-                </ul>
-            </div>
+    <nav class="navbar">
+        <div class='aryanlogo'>
+            <a href="index.html">Freelance<span class="free">Chowk</span></a>
+        </div>
+
+        <div class="menu-btn">
+            <button class="icon" onclick="mega_menu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class='nav-menu'>
+                <li>FEATURES
+                <li>SOLUTIONS
+                <li>RESOURCES
+                <li>PRICING
+            </ul>
         </div>
     </nav>
 
     <main class="sign-up">
-        <form action="/" class="sign-up-form" method="post">
+        <form action="/signin" class="sign-up-form" method="post">
             <h2 class="title">Sign in</h2>
+
             <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Username or email" />
-
-                <input type="text" placeholder="Username & email"  >
-
+                <input type="text" placeholder="Email" name="email" required />
             </div>
+
             <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Password" name = password>
+                <input type="password" placeholder="Password" name=password required>
             </div>
 
+            <input type="submit" class="btn" value="Sign In" />
+
             <p class="social-text">Or Sign in with social platforms</p>
+
             <div class="social-media">
                 <a href="#" class="social-icon">
                     <i class="fab fa-facebook-f"></i>
@@ -63,7 +64,8 @@
                     <i class="fab fa-linkedin-in"></i>
                 </a>
             </div>
-            <p>Don't have an account? <a href="sign-up.html">sign-up</a></p>
+
+            <p>Don't have an account? <a href="/signup">Sign-Up.</a></p>
         </form>
     </main>
 </body>

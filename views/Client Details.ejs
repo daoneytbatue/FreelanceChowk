@@ -2,40 +2,36 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/questionare.css">
-    <title>Clients Questionnaire</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/questionare.css">
+    <title>Enter Client Details</title>
 </head>
 
 <body>
-    <nav>
-        <div class="navbar">
-            <div class="aryanlogo">
-                <a href="index.html">Freelance<span class="free">Chowk</span></a>
-            </div>
-            <div class="menu-btn">
-                <button class="icon" onclick="mega_menu()">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-                <ul class="nav-menu">
-                    <li>HOME</li>
-                    <li>FEATURES</li>
-                    <li>SOLUTIONS</li>
-                    <li>RESOURCES</li>
-                    <li>PRICING</li>
-                </ul>
-            </div>
-            <div class="log-in-btn">
-                <a class="nav-connect" href="login.html">
-                    Log-in
-                </a>
-            </div>
+    <nav class="navbar">
+        <div class="aryanlogo">
+            <a href="index.html">Freelance<span class="free">Chowk</span></a>
+        </div>
+        <div class="menu-btn">
+            <button class="icon" onclick="mega_menu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li>HOME
+                <li>FEATURES
+                <li>SOLUTIONS
+                <li>RESOURCES
+                <li>PRICING
+            </ul>
+        </div>
+        <div class="log-in-btn">
+            <a class="nav-connect" href="login.html">
+                Log-in
+            </a>
         </div>
     </nav>
     <main class="container">
-        <form action="/" id="questionnaire" method="post">
+        <form action="/create/ClientDetails" id="questionnaire" method="post">
             <section class="personal_info">
                 <fieldset>
                     <legend>
@@ -94,7 +90,7 @@
             <section class="payment">
                 <fieldset>
                     <legend>
-                        <h2>Payment Informationn</h2>
+                        <h2>Payment Information</h2>
                     </legend>
                     <label for="address">Billing Address</label>
                     <input type="text" id="address" required placeholder="Billing Address">
@@ -125,7 +121,7 @@
                     </select>
                     <br><br>
 
-                    <label for="communication">Communicatio Preeference</label>
+                    <label for="communication">Communication Preference</label>
                     <select name="preference" id="preference">
                         <option value="" selected disabled>Select communication Preference</option>
                         <option value="email">E-Mail</option>
