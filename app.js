@@ -118,7 +118,7 @@ app.post("/create/FreelancerDetails", async (req, res) => {
             user.FL_details = userDetails._id;
             await user.save();
 
-            res.status(200).redirect("/user/FreelancerDashboard");
+            res.status(200).redirect("/user/Freelancer/Dashboard");
         });
     } catch (error) {
         console.error(error);
@@ -130,7 +130,7 @@ app.post("/create/ClientDetails", async (req, res) => {
     res.send("Working on Clients Details post");
 });
 
-app.get("/user/FreelancerDashboard", isLoggedIn, (req, res) =>{
+app.get("/user/Freelancer/Dashboard", isLoggedIn, (req, res) =>{
     res.render("FL Details")
 })
 
