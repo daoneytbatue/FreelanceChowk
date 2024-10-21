@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const freelancer = require('./freelancer');
+const client = require('./client');
 
 mongoose.connect("mongodb://127.0.0.1:27017/FreelanceChowk");
 
