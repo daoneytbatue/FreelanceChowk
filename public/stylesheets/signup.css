@@ -118,18 +118,26 @@ input[type="radio"] {
     padding: 12px;
 }
 
-.radio-btn {
-    margin: 15px;
-}
-
 .radio-btn h4 {
     color: #444;
 }
 
-.hidden-toggles{
+.hidden-toggles {
     display: flex;
-    background-color: red;
     padding: 20px;
-    margin-right: 20px;
-    margin-left: 20px;   
+}
+
+.hidden-toggles label {
+    font-size: 20px;
+    color: #444;
+    position: relative;
+    padding: 15px 30px 15px 15px;
+    background: #f0f0f0;
+    margin: 15px;
+    border-radius: 20px;
+}
+
+.hidden-toggles input[type="radio"] {
+    margin-top: 6px;
+    margin-left: 5px;
 }
