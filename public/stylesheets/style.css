@@ -16,6 +16,7 @@ body {
     display: flex;
     justify-content: space-around;
     padding-top: 20px;
+    box-shadow: -5px 5px 5px black;
 }
 
 .aryanlogo {
@@ -104,9 +105,10 @@ a {
         width: 7rem;
         position: absolute;
         display: block;
-        width: 93%;
+        width: 30%;
         left: 10px;
         border-radius: 5px;
+        margin: 20px;
     }
 
     .icon {
