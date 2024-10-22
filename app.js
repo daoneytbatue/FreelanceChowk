@@ -145,6 +145,18 @@ app.get("/user/Freelancer/Dashboard", isLoggedIn, (req, res) => {
     res.render("FL Details")
 })
 
+app.get("/users/Freelancer/jobs",isLoggedIn, (req, res) => {
+    res.render("myjob");
+});
+
+app.get("/users/Freelancer/proposal",isLoggedIn, (req, res) => {
+    res.render("proposal");
+});
+
+app.get("/users/profile",isLoggedIn, (req, res) => {
+    res.render("profile");
+});
+
 app.post("/logout", async (req, res) => {
     res.cookie("token", "");
     res.redirect("/");
