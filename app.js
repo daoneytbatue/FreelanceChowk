@@ -34,7 +34,7 @@ app.post("/signin", async (req, res) => {
 
         let user = await userModel.findOne({ email });
 
-        if (!user) return res.status(401).alert("User already exists");
+        if (!user) return res.status(401);
 
         const salt = await bcrypt.genSalt(10);
         const hash = await bcrypt.hash(password, salt);
@@ -129,7 +129,7 @@ app.post("/create/FreelancerDetails", async (req, res) => {
             user.FL_details = userDetails._id;
             await user.save();
 
-            res.status(200).redirect("/user/Freelancer/Dashboard");
+            res.redirect("/user/Freelancer/Dashboard");
         });
     } catch (error) {
         console.error(error);
@@ -142,18 +142,18 @@ app.post("/create/ClientDetails", async (req, res) => {
 });
 
 app.get("/user/Freelancer/Dashboard", isLoggedIn, (req, res) => {
-    res.render("FL Details")
+    res.render("freelancer")
 })
 
 app.get("/users/Freelancer/jobs",isLoggedIn, (req, res) => {
     res.render("myjob");
 });
 
-app.get("/users/Freelancer/proposal",isLoggedIn, (req, res) => {
+app.get("/user/Freelancer/proposal",isLoggedIn, (req, res) => {
     res.render("proposal");
 });
 
-app.get("/users/profile",isLoggedIn, (req, res) => {
+app.get("/user/profile",isLoggedIn, (req, res) => {
     res.render("profile");
 });
 
