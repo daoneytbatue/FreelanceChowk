@@ -34,9 +34,20 @@ app.post("/signin", async (req, res) => {
 
         let user = await userModel.findOne({ email });
 
-        if (!user) {
-            return res.status(401).alert("User already exists");
+        if (!user) return res.status(401).alert("User already exists");
+
+        const salt = await bcrypt.genSalt(10);
+        const hash = await bcrypt.hash(password, salt);
+
+        if (hash === user.password) {
+            let token = jwt.sign({ email, userId: user._id, isFreelancer: user.isFreelancer }, "My_Secret_Token");
+
+            res.cookie("token", token);
+            res.redirect("/user/Freelancer/Dashboard")
+        } else {
+            return res.status(401).alert("invalid Email or password");
         }
+
     } catch (error) {
         console.error(error);
         res.status(500).send("Server error");
@@ -130,7 +141,7 @@ app.post("/create/ClientDetails", async (req, res) => {
     res.send("Working on Clients Details post");
 });
 
-app.get("/user/Freelancer/Dashboard", isLoggedIn, (req, res) =>{
+app.get("/user/Freelancer/Dashboard", isLoggedIn, (req, res) => {
     res.render("FL Details")
 })
 
