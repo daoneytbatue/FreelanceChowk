@@ -9,12 +9,16 @@ const userModel = require("./models/user");
 const freelancerModel = require("./models/freelancer");
 const clientModel = require("./models/client");
 const isLoggedIn = require("./Middlewares/isLoggedIn");
+const authRouter = require("./routes/authRoute");
+
 
 app.set("view engine", "ejs");
 app.use(express.json());
 app.use(cookie());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
+
+app.use("/auth", authRouter);
 
 app.get("/", (req, res) => {
     res.render("index");
@@ -25,34 +29,11 @@ app.get("/test", (req, res) => {
 });
 
 app.get("/signin", (req, res) => {
-    res.render("signin");
+    res.render("signin",context={
+        alert: ""
+    });
 });
 
-app.post("/signin", async (req, res) => {
-    try {
-        let { email, password } = req.body;
-
-        let user = await userModel.findOne({ email });
-
-        if (!user) return res.status(401);
-
-        const salt = await bcrypt.genSalt(10);
-        const hash = await bcrypt.hash(password, salt);
-
-        if (hash === user.password) {
-            let token = jwt.sign({ email, userId: user._id, isFreelancer: user.isFreelancer }, "My_Secret_Token");
-
-            res.cookie("token", token);
-            res.redirect("/user/Freelancer/Dashboard")
-        } else {
-            return res.status(401).alert("invalid Email or password");
-        }
-
-    } catch (error) {
-        console.error(error);
-        res.status(500).send("Server error");
-    }
-});
 
 app.get("/signup", (req, res) => {
     res.render("signup");
