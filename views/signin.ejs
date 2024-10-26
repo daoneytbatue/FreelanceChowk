@@ -1,76 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('includes/header') %>
 
-<head>
-    <title>Log-in</title>
+<main class="sign-up">
+    <form action="/auth/signin" class="sign-up-form" method="post">
+        <h2 class="title">Sign in</h2>
 
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <link rel="stylesheet" href="stylesheets/signup.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
+        <% if(alert){ %>
+            <div class="alert alert-danger" role="alert">
+                Invalid email or password.
+            </div>
+        <% } %>
 
-<body>
-    <nav class="navbar">
-        <div class='aryanlogo'>
-            <a href="/">Freelance<span class="free">Chowk</span></a>
+        <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Email" name="email" required />
         </div>
 
-        <div class="menu-btn">
-            <button class="icon" onclick="mega_menu()">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
-            <ul class='nav-menu'>
-                <li><a href="/#main">HOME</a>
-                <li><a href="/#service">SERVICES</a>
-                <li><a href="/#feature">FEATURES</a>
-                <li><a href="/#">ABOUT</a>
-            </ul>
+        <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" name="password" required>
         </div>
-    </nav>
 
-    <main class="sign-up">
-        <form action="/signin" class="sign-up-form" method="post">
-            <h2 class="title">Sign in</h2>
+        <input type="submit" class="btn" value="Sign In" />
 
-            <div class="input-field">
-                <i class="fas fa-user"></i>
-                <input type="text" placeholder="Email" name="email" required />
-            </div>
+        <p class="social-text">Or Sign in with social platforms</p>
 
-            <div class="input-field">
-                <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Password" name=password required>
-            </div>
+        <div class="social-media">
+            <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+            </a>
+            <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
 
-            <input type="submit" class="btn" value="Sign In" />
+        <p>Don't have an account? <a href="/signup">Sign-Up.</a></p>
+    </form>
+</main>
 
-            <p class="social-text">Or Sign in with social platforms</p>
-
-            <div class="social-media">
-                <a href="#" class="social-icon">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="social-icon">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="social-icon">
-                    <i class="fab fa-google"></i>
-                </a>
-                <a href="#" class="social-icon">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </div>
-
-            <p>Don't have an account? <a href="/signup">Sign-Up.</a></p>
-        </form>
-    </main>
-
-    <script src="/javascripts/index.js"></script>
-
-</body>
-
-</html>
+<%- include('includes/footer') %>
