@@ -123,8 +123,8 @@ app.post("/create/ClientDetails", async (req, res) => {
 });
 
 app.get("/user/Freelancer/Dashboard", isLoggedIn, (req, res) => {
-    res.render("freelancer")
-})
+    res.render("freelancer", {username:req.user.username});
+});
 
 app.get("/users/Freelancer/jobs",isLoggedIn, (req, res) => {
     res.render("myjob");
@@ -142,6 +142,7 @@ app.post("/logout", async (req, res) => {
     res.cookie("token", "");
     res.redirect("/");
 });
+
 
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
